@@ -2,7 +2,7 @@
 # run something like tail /var/log/turtlecoind/current to see the status
 # be sure to run with volumes, ie:
 # docker run -v $(pwd)/turtlecoind:/var/lib/turtlecoind -v $(pwd)/wallet:/home/turtlecoin --rm -ti turtlecoin:latest
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20210416
 
 ADD https://github.com/just-containers/s6-overlay/releases/download/v1.21.2.2/s6-overlay-amd64.tar.gz /tmp/
 RUN tar xzf /tmp/s6-overlay-amd64.tar.gz -C /
